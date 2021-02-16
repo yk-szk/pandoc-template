@@ -1,0 +1,24 @@
+<script>
+
+    window.addEventListener('DOMContentLoaded', () => {
+        // Activate current position
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                const id = entry.target.getAttribute('id');
+                const dom = document.querySelector(`#TOC a[href="#${id}"]`);
+                const children = dom.parentNode.querySelectorAll('ul');
+                if (entry.intersectionRatio > 0) {
+                    dom.classList.add('active');
+                } else {
+                    dom.classList.remove('active');
+                }
+            });
+        }
+            , { threshold: [0, .5, 1] });
+
+        // Track all sections that have an `id` applied
+        document.querySelectorAll('section[id]').forEach((section) => {
+            observer.observe(section);
+        });
+    });
+</script>

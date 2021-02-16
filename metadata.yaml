@@ -1,0 +1,15 @@
+title: "Document title"
+subtitle: "Document subtitle"
+author:
+    - Jane Doe
+    - John Doe
+keywords:
+    - kw1
+    - kw2
+bibliography:
+    - references.bib
+link-citations: True
+reference-section-title: References
+toc-title: Table of contents
+autoSectionLabels: True
+secHeaderTemplate: "$$t$$"
