@@ -1,3 +1,5 @@
 manuscript.html
 manuscript.docx
 *.emf
+image/*.pdf
+out/
