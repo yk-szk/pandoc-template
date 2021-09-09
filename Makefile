@@ -9,7 +9,7 @@ gitclean:
 	git clean -fx
 
 %.pdf: %.tex
-	latexmk -pdf -g -pdflatex="pdflatex -interaction=nonstopmode" $<
+	latexmk -pdf -g -pdflatex="pdflatex -interaction=nonstopmode" -output-directory=out $<
 
 %.tex: %.md
 	pandoc -s --metadata-file metadata.yaml -F pandoc-crossref -F script/imgconv.py -F script/remove_header.py --biblatex --template templates/template.tex $< -t latex | grep -v -e \\tightlist -e \\labelenumi > $@

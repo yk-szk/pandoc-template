@@ -7,12 +7,11 @@ Cite multiple papers like so [@citekey; @citekey2].
 
 
 ## Image
-Include paper like this.
+Include an image like this.
 
 ![Write helpful image caption here.](image/doodle.svg){#fig:doodle}
 
 Refer to an image like this [@Fig:doodle].
-
 
 # Section2
 

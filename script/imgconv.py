@@ -39,7 +39,7 @@ def main():
 
     if args.pairs is None:
         if args.target == 'latex':
-            args.pairs = 'svg2eps'
+            args.pairs = 'svg2pdf'
         elif args.target == 'html':
             args.pairs = 'png2svg'
         elif args.target == 'docx':
@@ -49,8 +49,10 @@ def main():
 
     pairs = [['.{}'.format(ext) for ext in e.split('2')]
              for e in args.pairs.split(',')]
-    convs = [['.{}'.format(ext) for ext in e.split('2')]
-             for e in args.convs.split(',')]
+    convs = [[
+        '.{}'.format(ext) for ext in e.split('2')
+    ] for e in (args.convs.split(',') if args.convs else args.pairs.split(','))
+             ]
 
     def action(elem, doc):
         if isinstance(elem, pf.Image):
@@ -63,15 +65,15 @@ def main():
                         elem.url = str(p)
                     else:
                         for conv in convs:
-                            if conv[0] == pair[0] and conv[1] == pair[1]:
-                                if conv[0] == '.svg' and conv[1] == '.pdf':
-                                    svg2pdf(p_original, p)
-                                    elem.url = str(p)
+                            if conv[0] == pair[0] == '.svg' and conv[
+                                    1] == pair[1] == '.pdf':
+                                svg2pdf(p_original, p)
+                                elem.url = str(p)
                                 break
                         else:
                             if True:
                                 print('{} not found ({} to {}).'.format(
-                                    p, pair[0], pair[1]),
+                                    p_original, pair[0], pair[1]),
                                       file=sys.stderr)
         return elem
 

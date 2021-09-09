@@ -9,6 +9,7 @@ Markdown -> [html, docx]
 ```sh
 make manuscript.html
 make manuscript.docx
+make manuscript.pdf
 ```
 
-[utiliti scripts](script/README.md)
+[utility scripts](script/README.md)
