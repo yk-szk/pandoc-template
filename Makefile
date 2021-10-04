@@ -18,4 +18,4 @@ gitclean:
 	pandoc -s --katex -c templates/styles.css --template templates/template.html --metadata-file metadata.yaml -F pandoc-crossref --citeproc --toc --toc-depth=4 --section-divs -H templates/nav_script.html $< -o $@
 
 %.docx: %.md
-	pandoc -s --metadata-file metadata.yaml -F script/imgconv.py -F script/remove_header.py -F pandoc-crossref --citeproc $< -o $@
+	pandoc -s --metadata-file metadata.yaml -F script/imgconv.py -F script/remove_header.py -F pandoc-crossref --citeproc --reference-doc=templates/style.docx $< -o $@
