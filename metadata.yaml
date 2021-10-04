@@ -13,3 +13,4 @@ reference-section-title: References
 toc-title: Table of contents
 autoSectionLabels: True
 secHeaderTemplate: "$$t$$"
+csl: ieee.csl
