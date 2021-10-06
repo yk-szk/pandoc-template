@@ -20,6 +20,11 @@ def main():
                         help='Output file extension. default: %(default)s',
                         metavar='<ext>',
                         default='.pdf')
+    parser.add_argument(
+        '-B',
+        help=
+        'Force conversion even if existing output file is newer than input file.',
+        action='store_true')
 
     args = parser.parse_args()
 
@@ -37,6 +42,10 @@ def main():
     for fn in indir.glob('*.svg'):
         outname = outdir / fn.name
         outname = outname.with_suffix(args.ext)
+        if outname.exists() and not args.B:
+            if os.path.getmtime(outname) >= os.path.getmtime(fn):
+                print('Skip', fn)
+                continue
         conv_args = [args.inkscape, str(fn)]
         if args.ext == '.svg':
             conv_args.append('-l')
