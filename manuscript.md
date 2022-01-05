@@ -37,12 +37,11 @@ sub $x_{0}$ and super $x^{1}$ scripts.
 $$
 E = mc^2
 $${#eq:Einstein}
-
 Refer to an equation [@Eq:Einstein].
 
 
 ## Table
-[@Tbl:example] show a table.
+[@Tbl:example] shows a table.
 
 
 |  TH  |  TH  |

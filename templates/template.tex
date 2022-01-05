@@ -1,9 +1,11 @@
-\documentclass{scrartcl}
+\documentclass[11pt,a4paper]{article}
 
 \usepackage{biblatex}
 \usepackage{bookmark}
 \usepackage{hyperref}
-
+\usepackage{subfig}
+\usepackage{longtable}
+\usepackage{booktabs}
 \usepackage{graphicx}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
@@ -42,7 +44,7 @@ $endif$
 
 \title{$title$}
 $if(subtitle)$
-\subtitle{$subtitle$}
+%\subtitle{$subtitle$}
 $endif$
 
 \author{$for(author)$$author$$sep$ \and $endfor$}
