@@ -1,5 +1,7 @@
-manuscript.html
-manuscript.docx
+*.html
+*.docx
+*.tex
+*.pdf
 *.emf
 image/*.pdf
-out/
+output/

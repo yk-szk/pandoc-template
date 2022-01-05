@@ -90,10 +90,25 @@ figure {
 figure figcaption {
     width: 100%;
 }
+.subfigures figcaption {
+    text-align: center;
+}
 figure img {
     display: block;
     max-width: 100%;
     margin: auto;
+}
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+}
+thead>tr {
+    border-bottom: solid 1px black;
+}
+td, th {
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
 #toc-title {

@@ -13,6 +13,19 @@ Include an image like this.
 
 Refer to an image like this [@Fig:doodle].
 
+### Subfigures
+Subfigure [@Fig:subfigures] contains [@Fig:suba;@Fig:subb].
+
+<div id="fig:subfigures">
+
+![Caption A.](image/doodle.svg){#fig:suba}
+
+![Caption B.](image/doodle.svg){#fig:subb}
+
+Caption for the subfigures.
+
+</div>
+
 # Section2
 
 ## Math
@@ -26,3 +39,15 @@ E = mc^2
 $${#eq:Einstein}
 
 Refer to an equation [@Eq:Einstein].
+
+
+## Table
+[@Tbl:example] show a table.
+
+
+|  TH  |  TH  |
+| ---- | ---- |
+|  TD  |  TD  |
+|  TD  |  TD  |
+
+: Table caption. {#tbl:example}

@@ -1,5 +1,26 @@
 autoSectionLabels: True
-
+chapters: True # figure number will be "ch.num"
+secHeaderTemplate: $$t$$
+# subfigGrid: True
+ccsDelim: "&nbsp;"
+ccsLabelSep: "&nbsp;"
+subfigureRefIndexTemplate: $$i$$$$suf$$ ($$s$$)
+subfigureTemplate: $$figureTitle$$ $$i$$$$titleDelim$$ $$t$$
+ccsTemplate: ($$i$$)$$ccsLabelSep$$$$t$$
+subfigureChildTemplate: ($$i$$) $$t$$
 linkReferences: True
+pairDelim: "&nbsp;and&nbsp;"
 
 numberSections: True
+figPrefix:
+  - "figure"
+  - "figures"
+tblPrefix:
+  - "table"
+  - "tables"
+eqnPrefix:
+  - "equation"
+  - "equations"
+secPrefix:
+  - "chapter"
+  - "chapters"
