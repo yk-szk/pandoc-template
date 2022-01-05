@@ -5,3 +5,4 @@
 *.emf
 image/*.pdf
 output/
+.DS_Store
